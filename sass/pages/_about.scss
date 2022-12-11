@@ -1,0 +1,161 @@
+.main-top {
+  position: relative;
+  margin-bottom: 12rem;
+  padding-top: 7.2rem;
+  padding-bottom: 7.2rem;
+
+  h1 {
+    color: $color-white;
+    @include responsive(m-tablet) {
+      text-align: center;
+    }
+  }
+}
+.about-bg {
+  background-image: url(../images/png/about-doth.png);
+  @include bgimg;
+  background-image: url(../images/png/bgshadow.png),
+    url(../images/png/about.png);
+  @include responsive(m-tablet) {
+    background-position-x: left, 35%;
+  }
+  @include responsive(portfolio) {
+    background-image: url(../images/png/bgshadow.png),
+      url(../images/png/mobileabout.png);
+  }
+}
+.main-top::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 23.4rem;
+  height: 7.3rem;
+  @include bgimg;
+  background-image: url(../images/png/about-doth.png);
+  background-size: contain;
+  right: 0;
+  top: 35%;
+  @include responsive(m-tablet) {
+    display: none;
+  }
+}
+
+// main-top end
+
+.values {
+  margin-bottom: 12rem;
+  text-align: center;
+  h2 {
+    margin-bottom: 10rem;
+  }
+  &__cards {
+    @include flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+    @include responsive(tablet) {
+      gap: 5.5rem;
+    }
+  }
+  &__cards-box {
+    width: 35rem;
+    @include responsive(m-desktop) {
+      width: 100%;
+    }
+    @include responsive(tablet) {
+      width: 100%;
+    }
+    .values-img {
+      position: relative;
+      margin-bottom: 8.7rem;
+      width: 24rem;
+      height: 24rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .values-img::after {
+      position: absolute;
+      padding-top: 10%;
+      color: $color-dark;
+      bottom: -18%;
+      left: 30%;
+      content: "01";
+      font-family: $space-mono;
+      font-weight: 700;
+      font-size: 2.4rem;
+
+      background-color: $color-yellow;
+      display: block;
+      width: 9.6rem;
+      height: 9.6rem;
+      border-radius: 50%;
+    }
+    .num2::after {
+      content: "02";
+    }
+    .num3::after {
+      content: "03";
+    }
+    img {
+      width: 24rem;
+      height: 24rem;
+      border-radius: 50%;
+    }
+    h4 {
+      margin-bottom: 2.7rem;
+    }
+  }
+}
+
+// values end
+
+.faq {
+  margin-bottom: 16rem;
+  h2 {
+    margin-bottom: 6.4rem;
+    text-align: center;
+  }
+
+  &__wrapper {
+    @include flex;
+    align-items: flex-start;
+    gap: 3rem;
+    color: $color-dark;
+    margin-bottom: 6.4rem;
+    @include responsive(m-desktop) {
+      flex-direction: column;
+      align-items: center;
+    }
+    h2 {
+      width: 35rem;
+      letter-spacing: -1.79px;
+      font-size: 4rem;
+      @include responsive(tablet) {
+        width: 100%;
+      }
+    }
+  }
+  &__cards-box {
+    width: 73rem;
+    background-color: $color-accor;
+    padding: 3.2rem 4rem;
+
+    .accardion {
+      @include flex;
+      margin-bottom: 2.4rem;
+      h4 {
+        @include responsive(portfolio) {
+          font-size: 1.8rem;
+        }
+      }
+    }
+    @include responsive(tablet) {
+      width: 100%;
+    }
+  }
+
+  &__cards-box:not(:last-child) {
+    margin-bottom: 1.6rem;
+  }
+}

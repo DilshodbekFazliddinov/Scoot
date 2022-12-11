@@ -1,0 +1,46 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+ul,
+ol {
+  list-style: none;
+}
+
+html {
+  font-size: 62.5%;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: $body-color;
+  font-size: 1.5rem;
+  font-family: $lexend-deca;
+  font-weight: 400;
+  line-height: 1.67;
+  color: $color-grey;
+  display: flex;
+  flex-direction: column;
+}
+.container {
+  width: 100%;
+  max-width: 1210px;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-right: auto;
+  margin-left: auto;
+  @include responsive(m-tablet) {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
+main {
+  flex-grow: 1;
+}

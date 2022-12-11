@@ -1,0 +1,36 @@
+.careers-bg {
+  background-image: url(../images/png/about-doth.png);
+  @include bgimg;
+  background-image: url(../images/png/bgshadow.png),
+    url(../images/png/careers.png);
+  @include responsive(m-tablet) {
+    background-position-x: left, 35%;
+  }
+  @include responsive(portfolio) {
+    background-image: url(../images/png/bgshadow.png),
+      url(../images/png/carer.png);
+  }
+}
+.types {
+  margin-bottom: 16rem;
+  &__card {
+    padding: 3.2rem 4rem 3.5rem;
+    background-color: $color-accor;
+    @include flex;
+    .btn {
+      @include responsive(m-tablet) {
+        padding-left: 6rem;
+        padding-right: 6rem;
+      }
+    }
+    @include responsive(m-tablet) {
+      flex-direction: column;
+      gap: 1.6rem;
+      text-align: center;
+    }
+  }
+  &__card:not(:last-child) {
+    margin-bottom: 2.4rem;
+  }
+}
+// types end

@@ -1,0 +1,35 @@
+.location {
+  margin-bottom: 12rem;
+  img {
+    width: 100%;
+  }
+  .desktop-loc {
+    @include responsive(portfolio) {
+      display: none;
+    }
+  }
+  .mobile-loc {
+    display: none;
+    margin-bottom: 4rem;
+    @include responsive(portfolio) {
+      display: block;
+    }
+  }
+  .country {
+    display: none;
+
+    @include responsive(portfolio) {
+      display: block;
+      @include flex;
+      flex-direction: column;
+      gap: 1.6rem;
+    }
+  }
+  .country-btn {
+    width: 100%;
+    text-align: center;
+    display: block;
+    padding: 2.2rem 10rem;
+    background-color: $color-rgba;
+  }
+}

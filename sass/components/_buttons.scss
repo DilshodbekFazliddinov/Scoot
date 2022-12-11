@@ -1,0 +1,57 @@
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1.4rem 4.8rem;
+  background-color: $color-yellow;
+  color: #fff;
+  font-family: $space-mono;
+  border: 3px solid $color-yellow;
+}
+.btn:hover {
+  background-color: transparent;
+  color: $color-yellow;
+  outline: none;
+}
+.toogle_btn {
+  display: none;
+  background-color: transparent;
+  i {
+    transition: 2s all;
+  }
+  @include responsive(tablet) {
+    display: block;
+  }
+}
+// .fa-bars {
+//   font-size: 45px;
+// }
+.fa-angle-up,
+.fa-angel-down {
+  font-size: 30px;
+  color: $color-yellow;
+}
+.accor_btn {
+  background-color: transparent;
+  font-size: 30px;
+  color: $color-yellow;
+}
+.accor_btn2 {
+  background-color: transparent;
+}
+.accor_btn3 {
+  background-color: transparent;
+}
+.accor_btn4 {
+  background-color: transparent;
+}
+.accor_btn5 {
+  background-color: transparent;
+}
+.accor_btn6 {
+  background-color: transparent;
+}

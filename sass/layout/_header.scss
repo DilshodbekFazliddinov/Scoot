@@ -1,0 +1,20 @@
+header {
+  padding: 2.2rem 0;
+  position: sticky;
+  top: 0;
+  // z-index: 1;
+  background-color: rgba(255, 255, 255, 0.7);
+  @include responsive(tablet) {
+    z-index: 1;
+  }
+  .header__container {
+    @include flex;
+    justify-content: flex-start;
+    gap: 6rem;
+    @include responsive(tablet) {
+      gap: 0;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

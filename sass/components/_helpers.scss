@@ -1,0 +1,31 @@
+.hidden {
+  @include responsive(tablet) {
+    display: none;
+  }
+}
+
+.sidebar-hidden {
+  display: none;
+  @include responsive(tablet) {
+    transform: translateX(-100%);
+    display: block;
+  }
+}
+.accor1 {
+  display: none;
+}
+.accor2 {
+  display: none;
+}
+.accor3 {
+  display: none;
+}
+.accor4 {
+  display: none;
+}
+.accor5 {
+  display: none;
+}
+.accor6 {
+  display: none;
+}
